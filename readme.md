@@ -3,7 +3,7 @@
 ## Introduction
 
 
-A place for members to track their advent of code solutions to puzzles on [Advent of Code 2019](http://https://adventofcode.com/2019).
+A place for members to track their advent of code solutions to puzzles on [Advent of Code 2019](https://adventofcode.com/2019).
 
 ## Join Code
 We are using the join code ``117235-01fec7e7``. For a private leaderboard among the community. 
