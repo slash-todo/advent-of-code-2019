@@ -14,7 +14,7 @@ public class a {
             input = new BufferedReader(new FileReader(fileName));
             String currentLine = input.readLine();
             while (currentLine != null && currentLine != "") {
-                fuelSum += calculateFuel(Integer.parseInt(currentLine));
+                fuelSum += Math.floor((mass / 3) - 2);
                 currentLine = input.readLine();
             }
             input.close();
@@ -23,10 +23,6 @@ public class a {
             System.out.println(e);
             return 0;
         }
-    }
-
-    private static double calculateFuel(int mass) {
-        return Math.floor((mass / 3) - 2);
     }
 
 }
