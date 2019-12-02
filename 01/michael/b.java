@@ -34,7 +34,6 @@ public class Main {
         double additionalFuel = Math.floor((currentFuel / 3) - 2);
         while (additionalFuel > 0) {
             totalRequiredFuel += additionalFuel;
-            System.out.println(additionalFuel);
             additionalFuel = Math.floor((additionalFuel / 3) - 2);
         }
         return totalRequiredFuel;
