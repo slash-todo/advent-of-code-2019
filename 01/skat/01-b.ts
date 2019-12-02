@@ -1,6 +1,6 @@
 const inputs = require('./input.ts');
 
-const getFuelRequirement = (mass: number) => {
+const getFuelRequirement = (mass: number): number => {
     let total: number = 0;
     let fuel: number = mass;
     while (fuel > 0) {

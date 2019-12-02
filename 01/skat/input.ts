@@ -1,10 +1,10 @@
-const fs = require('fs');
+import fs = require('fs');
 
 const input = fs
     .readFileSync(`${__dirname}/input.txt`)
     .toString()
     .trim();
 
-module.exports = input.split(`\n`).map((str: string) => Number(str));
+module.exports = input.split(`,`).map((num: string) => Number(num));
 
 // thanks to jgierer12 on github for this handy solution
