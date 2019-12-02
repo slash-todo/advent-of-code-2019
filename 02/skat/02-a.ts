@@ -1,14 +1,14 @@
-const inputs = require('./input.js');
+import inputs = require('./input');
 
 // hardcore computer repairs:
 inputs[1] = 12;
 inputs[2] = 2;
 
-for (let i = 0; i < inputs.length; i = i + 4) {
-    const opcode = inputs[i];
-    const a = inputs[inputs[i + 1]];
-    const b = inputs[inputs[i + 2]];
-    const writeLocation = inputs[i + 3];
+for (let i: number = 0; i < inputs.length; i = i + 4) {
+    const opcode: number = inputs[i];
+    const a: number = inputs[inputs[i + 1]];
+    const b: number = inputs[inputs[i + 2]];
+    const writeLocation: number = inputs[i + 3];
 
     // if opcode is 99, end execution
     if (opcode === 99) break;
@@ -25,3 +25,5 @@ for (let i = 0; i < inputs.length; i = i + 4) {
 }
 
 console.log(inputs[0]);
+
+export {};
