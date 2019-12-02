@@ -5,6 +5,6 @@ const input = fs
     .toString()
     .trim();
 
-module.exports = input.split(`\n`).map(str => Number(str));
+module.exports = input.split(`\n`).map((str: string) => Number(str));
 
 // thanks to jgierer12 on github for this handy solution
