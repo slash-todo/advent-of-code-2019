@@ -1,4 +1,4 @@
-import inputs = require('./input');
+import inputs from './input';
 
 function processIntcode(
     instructions: number[],
