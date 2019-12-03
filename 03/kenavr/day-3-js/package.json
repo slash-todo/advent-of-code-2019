@@ -1,0 +1,11 @@
+{
+  "name": "aoc-day-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "KenavR",
+  "license": "MIT"
+}
