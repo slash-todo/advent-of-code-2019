@@ -15,6 +15,10 @@ class Password {
         return this.hasDouble() && this.isOnlyIncreasing()
     }
 
+    fun isStrictlyValid(): Boolean {
+        return this.isValid() && this.hasValidDigitGroups()
+    }
+
     private fun toDigits(number: Int): List<Int> {
         var temp: Int = number
         val array = ArrayList<Int>()
@@ -44,5 +48,19 @@ class Password {
         }
 
         return true
+    }
+
+    private fun hasValidDigitGroups(): Boolean {
+        val regex = """([1-9])\1+""".toRegex()
+        val numberAsString = this.digits.joinToString("")
+        val results = regex.findAll(numberAsString).toList()
+
+        if (results.any { r ->
+                r.groups.any { g -> g?.value!!.length == 2 }
+            }) {
+            return true
+        }
+
+        return false
     }
 }
