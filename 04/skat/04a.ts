@@ -1,6 +1,7 @@
 import inputs from './input';
 
-const min: number = 347312;
+// const min: number = 347312;
+const min: number = 400000;
 const max: number = 805915;
 
 const possibilities: number[] = [];
@@ -19,14 +20,12 @@ for (let i: number = min; i < max; i++) {
     const isIncreasingSequence: boolean = array.every(
         (val, index, arr): boolean => {
             return (
-                arr[index] <= arr[index + 1] || arr[index + 1] === arr.length
+                arr[index] <= arr[index + 1] ||
+                arr[index] === arr[arr.length - 1]
             );
         }
     );
-
-    if (adjacentDigitsMatch || isIncreasingSequence) {
-        debugger;
-    }
+    debugger;
     if (
         isSixDigitNumber &&
         isInRange &&
