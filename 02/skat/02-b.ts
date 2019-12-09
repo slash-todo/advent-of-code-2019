@@ -17,11 +17,6 @@ function processIntcode(
         // if opcode is 99, end execution
         if (opcode === 99) break;
 
-        // if opcode is wrong, throw error
-        // if (opcode !== 1 && opcode !== 2) {
-        //     throw new Error(`Invalid Opcode: ${opcode}`);
-        // }
-
         // if its not 99, process the sequence
         const a: number = instructions[instructions[i + 1]];
         const b: number = instructions[instructions[i + 2]];
