@@ -17,8 +17,13 @@ for (let i: number = min; i < max; i++) {
     const isSixDigitNumber: boolean = string.split('').length === 6;
     const isInRange: boolean = number > min && number < max;
     const adjacentDigitsMatch: boolean = array.some(
-        (val, index, arr): boolean => arr[index] === arr[index + 1]
+        (target, index, arr): boolean => arr[index] === arr[index + 1]
     );
+    const exclusivePair: any = array.some((val, index, arr): boolean => {
+        return (
+            arr.filter((target: number): boolean => val === target).length === 2
+        );
+    });
     const isIncreasingSequence: boolean =
         array[0] <= array[1] &&
         array[1] <= array[2] &&
@@ -30,7 +35,8 @@ for (let i: number = min; i < max; i++) {
         isSixDigitNumber &&
         isInRange &&
         adjacentDigitsMatch &&
-        isIncreasingSequence
+        isIncreasingSequence &&
+        exclusivePair
     ) {
         // if all conditions are true, add to the possibilities
         possibilities.push(i);
