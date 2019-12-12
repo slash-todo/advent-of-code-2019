@@ -21,7 +21,8 @@ class Image {
     }
     private getLayerWithFewestZeros(): number[] {
         return this.layers.reduce((acc, cur) => {
-            return acc.filter(el => el !== 0) > cur.filter(el => el !== 0)
+            return acc.filter(el => el !== 0).length >
+                cur.filter(el => el !== 0).length
                 ? acc
                 : cur;
         });
@@ -30,7 +31,6 @@ class Image {
         const target = this.getLayerWithFewestZeros();
         const ones = target.filter(el => el === 1).length;
         const twos = target.filter(el => el === 2).length;
-        debugger;
         return ones * twos;
     }
 }
