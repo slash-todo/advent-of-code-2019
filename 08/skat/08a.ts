@@ -1,7 +1,7 @@
 import inputs from '../../08/skat/input';
 
-class Image {
-    layers: number[][];
+export default class SpaceImageFormat {
+    public layers: number[][];
     public constructor(
         private data: number[],
         private width: number,
@@ -35,5 +35,5 @@ class Image {
     }
 }
 
-console.log(new Image(inputs, 25, 6).getChecksum());
-debugger;
+// solution
+// console.log(new Image(inputs, 25, 6).getChecksum());
